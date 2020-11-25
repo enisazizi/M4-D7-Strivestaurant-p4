@@ -1,9 +1,10 @@
 import React from "react";
-import { Row, Col, Image, Badge } from "react-bootstrap";
+import { Row, Col, Image, Badge, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const SingleDish = (props) => (
   <>
+    {props.dish ? (
     <Row>
       <Col md={8} className="ml-auto mr-auto">
         <Row>
@@ -26,6 +27,7 @@ const SingleDish = (props) => (
         </Row>
       </Col>
     </Row>
+    ):(<Alert variant="danger"> We encountered a problem with your request</Alert>)}
   </>
 )
 
